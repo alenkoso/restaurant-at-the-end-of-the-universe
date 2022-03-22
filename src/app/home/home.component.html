@@ -1,0 +1,15 @@
+﻿<div class="card mt-4">
+    <h4 class="card-header">Welcome</h4>
+    <div class="card-body">
+      <div *ngFor="let item of orderedProducts">
+        {{item}}
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="orderReady" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Order ready
+        </label>
+      </div>
+      <button type="button" *ngIf="this.orderReady" class="btn btn-primary" (click)="serveOrder()">Serve order</button>
+    </div>
+</div>
